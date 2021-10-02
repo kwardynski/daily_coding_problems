@@ -18,3 +18,5 @@ For example, given the following matrix:
 ```
 You should return ```True```, since the bishop is attacking the king diagonally
 
+### Solutions:
+[Elixir](https://github.com/kwardynski/daily_coding_problems/tree/master/DCP267_hard/elixir/check_checker)
