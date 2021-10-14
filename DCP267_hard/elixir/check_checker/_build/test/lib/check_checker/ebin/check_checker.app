@@ -2,9 +2,8 @@
              [{applications,[kernel,stdlib,elixir,logger]},
               {description,"check_checker"},
               {modules,['Elixir.CheckChecker',
-                        'Elixir.CheckChecker.BoardHandlers',
                         'Elixir.CheckChecker.ChessPiece',
                         'Elixir.CheckChecker.CoordinateConversions',
-                        'Elixir.CheckChecker.ResultsHandlers']},
+                        'Elixir.CheckChecker.Helpers']},
               {registered,[]},
               {vsn,"0.1.0"}]}.
