@@ -22,3 +22,5 @@ iex(1)> points = [{1, 1}, {-1, -1}, {3, 4}, {6, 1}, {-1, 6}, {-4, -3}]
 iex(2)> ClosestPoints.find_closest_points(points)
 %{ dist: 2.83...., p1: {-1, -1}, p2: {1, 1} }
 ```
+
+TEST
