@@ -5,6 +5,7 @@
 using std::cout;
 using std::endl;
 using std::reverse;
+using std::size_t;
 using std::vector;
 
 int main() {
@@ -18,14 +19,13 @@ int main() {
     reverse(building_heights.begin(), building_heights.end());
 
     // Set "comparison" variables
-    typedef vector<int>::size_type vlen;
-    vlen sunset_view_count = 0;           // total buildings with view of sunset
-    int max_height = 0;                   // highest building encountered so far
+    size_t sunset_view_count = 0;   // total buildings with view of sunset
+    int max_height = 0;             // highest building encountered so far
 
-    // Loop through list and update sunset_view_count, max_height as necessary
-    for (vlen i = 0; i != building_heights.size(); ++i) {
-        if (building_heights[i] > max_height) {
-            max_height = building_heights[i];
+    // Traverse through list and update sunset_view_count, max_height as necessary
+    for (const auto &building : building_heights) {
+        if (building > max_height) {
+            max_height = building;
             ++sunset_view_count;
         }
     }
