@@ -12,7 +12,7 @@ I'm going to do this one in C++ since MATLAB would be cheating (you can simply d
     - If the **element** exists in the tracking set, break and return TRUE
     - If the **element** does not exist in the set, add it's **"k-complement"** to the set and move to the next element
 
-This method has O(n) complexity for both time and space - probably not optimized but satisfies the conditions of the question. Full code can be found in (complement_finder.cpp)[complement_finder.cpp], which has three lists and accompanying `k` values hard-coded in. Compiling and running the code for each of the lists yields the following results:
+This method has O(n) complexity for both time and space - probably not optimized but satisfies the conditions of the question. Full code can be found in [complement_finder.cpp](complement_finder.cpp), which has three lists and accompanying `k` values hard-coded in. Compiling and running the code for each of the lists yields the following results:
 
 **using { 10, 15, 3, 7 }, k = 17**\
 Expecting TRUE (1)
@@ -32,4 +32,4 @@ Expecting TRUE (1)
 1
 ```
 
-There's no contingency in place for an empty list since the question states we're "given a list of numbers" - so I'm making the assumption that the list will not be empty.
+There's no contingency in place for an empty list since the question states we're "given a list of numbers" - so based on the wording I'm making the assumption that the list will not be empty.
