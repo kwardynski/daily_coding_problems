@@ -16,6 +16,7 @@ pow(x, y) = (x^exp1) * (x^exp2) * (x^exp2)
 - If `y` is odd: `exp1` = 1 and `exp2` = `(y-1)/2`
 
 The solution is found in [exponentiation.cpp](exponentiation.cpp), which calls the `custom_pow` function on a few different combinations of integers. When compiled and run the code yields the following results:
+```
 `2^10 = 1024
 3^4 = 81
 5^0 = 1
