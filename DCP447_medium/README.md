@@ -21,5 +21,5 @@ The solution is found in [exponentiation.cpp](exponentiation.cpp), which calls t
 3^4 = 81
 5^0 = 1
 12^1 = 1728
--3^3 = -27``
+-3^3 = -27
 ```
