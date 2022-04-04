@@ -30,7 +30,7 @@ This method is relatively fast (tail call recursion!), running it on a random li
 ```
 iex pivot_sort.ex
 
-iex(1)> lst = Enum.map(Enum.to_list(1..1000000), fn(x) -> :rand.uniform(100) end)
+iex(1)> lst = Enum.map(Enum.to_list(1..1000000), fn(_) -> :rand.uniform(100) end)
 iex(2)> :timer.tc(PivotSort, :main, [test, 10])
 {49085, [...]}
 ```
