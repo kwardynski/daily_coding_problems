@@ -26,5 +26,14 @@ iex(1)> PivotSort.main([9, 12, 3, 5, 14, 10, 10], 10)
 [5, 3, 9, 10, 10, 14, 12]
 ```
 
+This method is relatively fast (tail call recursion!), running it on a random list of 1,000,000 numbers takes 0.049s, which is significantly quicker than actually creating that list of random numbers:
+```
+iex pivot_sort.ex
+
+iex(1)> lst = Enum.map(Enum.to_list(1..1000000), fn(x) -> :rand.uniform(100) end)
+iex(2)> :timer.tc(PivotSort, :main, [test, 10])
+{49085, [...]}
+```
+
 ### The Optimal(?) Way - C++
 Ok - time to keep pumping those C++ numbers (later)...
