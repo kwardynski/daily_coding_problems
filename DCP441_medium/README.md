@@ -36,4 +36,17 @@ iex(2)> :timer.tc(PivotSort, :main, [test, 10])
 ```
 
 ### The Optimal(?) Way - C++
-Ok - time to keep pumping those C++ numbers (later)...
+Ok - time to keep pumping those C++ numbers. So there's a way to do a 3-way sort in place in linear time, referred to as the "Dutch national flag problem" which uses 3 pointers to traverse across a list:
+- A "low" pointer, which starts at index 0 and represents the highest index of the values below the pivot sorted _so far_
+- A "mid" or "current" pointer, which starts at index 0 and represents the current value you're attempting to sort
+- a "high" pointer, which starts at the end of the list and represents the lowest index of the values above the pivot sorted _so far_
+
+You traverse through the list, swapping values and updating pointers with the following rules:
+- If `lst[mid]` is equal to the pivot `x`, you can assume it's in the "right" place, so increment `mid`
+- If `lst[mid]` is less than the pivot `x`, you need to move it down, so you swap it with `lst[low]`, and increment both of those pointers
+- If `lst[mid]` is greater than the pivot `x`, you need to move it up, so you swap it with `lst[high]` and decrement only the high pointer
+
+Do this until the mid pointer is equal to or greater than the high pointer, which signifies that your list has been sorted. The code for this implementation can be found in [pivot_sort.cpp](pivot_sort.cpp). When run and compiled yields the following result:
+```
+9 3 5 10 10 14 12 
+```
