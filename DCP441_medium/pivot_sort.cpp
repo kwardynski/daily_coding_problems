@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -41,8 +40,8 @@ int main() {
     }
 
     // Print sorted results:
-    for (size_t i = 0; i < lst_length; i++){
-        cout << lst[i] << " ";
+    for (const auto& elem : lst){
+        cout << elem << " ";
     }
     cout << endl;
 
