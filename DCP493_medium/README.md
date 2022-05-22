@@ -27,4 +27,6 @@ The code found in [probability_return](probability_return.cpp) yields the follow
 0.367604 | 2
 ```
 
+The code runs in `O(n)` time (worst case is one pass through the probabilities list) and requires `O(1)` space as we utilize a constant number of variables to help us solve it, regardless of the length of the numbers/probabilities arrays. 
+
 
