@@ -14,7 +14,7 @@ In order to solve this problem, we'll define one extra vairable, `prob_floor`, w
 
 For example:
 We generate a random number: `0.63`, set `prob_floor` to 0 and begin:
-1. First we check if our ranodm number is less than `prob_floor`, which it is not, therefore we add `probabilities[0]` to `prob_floor`, which yields `0.1`, we increment `i` and try again.
+1. First we check if our random number is less than `prob_floor`, which it is not, therefore we add `probabilities[0]` to `prob_floor`, which yields `0.1`, we increment `i` and try again.
 2. We check if our random number is less than `prob_floor`, which is currently `0.1`. Since it is not, we add `probabilities[1]` to `prob_floor`, which yields `0.6`, we increment `i`, and try again.
 3. Next we check if our random number is less than `prob_floor`, which it sill is not. Add `probabilities[2]` to `prob_floor`, which yields `0.8`, increment `i` and move on.
 4. Now we check if our random number is less than `prob_floor`, which it is - this means we've _passed_ the range of the probability of encountering our number, therefore we must return `i-1`.
