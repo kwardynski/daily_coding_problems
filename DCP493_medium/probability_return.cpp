@@ -6,24 +6,22 @@ int find_probability_index(float random_number, float probabilities[], int size)
     
     // Initialize our "range" variables
     float prob_floor = 0.0;
-    float prob_ciel;
     
-    // Loop to find our probability "index"
-    for (int i = 0; i < size; i++) {
+    // Loop to find our probability "index" to check if our random number has surpassed
+    // the probability range it exists in
+    int i;
+    for (i = 0; i < size; i++) {
         
-        // Define our range upper bound
-        prob_ciel = prob_floor + probabilities[i];
-        
-        // If random number within our defined range, return i
-        if (prob_floor <= random_number && random_number < prob_ciel) {
-            return i;
+        // If we've exceeded the range, return the previous value of i
+        if (random_number < prob_floor) {
+            return i - 1;
         }
-        
-        // If not, update range lower bound and move on
+        // If not, increase prob_floor accordingly and try again
         else {
-            prob_floor = prob_ciel;
+            prob_floor = prob_floor + probabilities[i];
         }
     }
+    return i-1;
 }
 
 
