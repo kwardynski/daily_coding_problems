@@ -12,7 +12,7 @@ Which of the two games should Alice elect to play? Does it even matter? Write a 
 ## Solution
 Upon _quick_ inspection, it seems that the two games should be equal - if you roll a 5, you have a 1/6 change of rolling a 5 or a 6 afterwards. The difference here is what happens if you _don't_ roll a the winning number immediately after the first 5. In the second game, if you don't roll a 5, you have to start again - meaning you're one roll behind the first game, where if you don't roll a 6 immediately after a 5, you _could possibly_ roll a 5 which lands you right back at needing the winning roll post initial 5 roll.  
 
-The code in _dues_calculator.exs_ simulates this, the function `DuesCalculator.run/2` will calculate how many rolls are required to achieve a specified winning condition. `ResultsHandler.run/3` is the main entry point and requires 3 arguments, how many attempts to try, the initial number, and the required following number. It will call `DuesCalculator.run/2` however many times specified by the total results argument, calculate the average required roll (representing Alice's dues fees) and display the results.  
+The code in [dues_calculator.exs](dues_calculator.exs) simulates this, the function `DuesCalculator.run/2` will calculate how many rolls are required to achieve a specified winning condition. `ResultsHandler.run/3` is the main entry point and requires 3 arguments, how many attempts to try, the initial number, and the required following number. It will call `DuesCalculator.run/2` however many times specified by the total results argument, calculate the average required roll (representing Alice's dues fees) and display the results.  
 
 ```
 iex dues_calculator.exs
